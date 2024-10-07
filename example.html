@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hexToRGB.js</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Szymon Gniadek">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="color.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <div class="logo"><h1>hexToRGB.js</h1></div>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="example.html">Example</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Example</h2>
+                <div class="content">
+                    <h3>Color Info</h3>
+                    <div class="flex">
+                        <div>
+                            <p>Choose a color: <input type="color" value="#4bcf26"></p>
+                            <p><b>Hex:</b> <span id="hexCode">#4bcf26</span></p>
+                            <p><b>Rgb:</b> <span id="rgbCode">75,207,38</span></p>
+                        </div>
+                        <div class="square" id="square"></div>
+                    </div>
+                    <h3>Source Code</h3>
+                    <p class="script">
+                        <span class="const-color">const</span> <span class="var-color">colorInput</span> = <span class="document-color">document</span>.<span class="function-color">querySelector</span>(<span class="string-color">"input"</span>); <br>
+                        <span class="const-color">const</span> <span class="var-color">hexOutput</span> = <span class="document-color">document</span>.<span class="function-color">getElementById</span>(<span class="string-color">"hexCode"</span>);<br>
+                        <span class="const-color">const</span> <span class="var-color">rgbOutput</span> = <span class="document-color">document</span>.<span class="function-color">getElementById</span>(<span class="string-color">"rgbCode"</span>);<br>
+                        <span class="const-color">const</span> <span class="var-color">square</span> = <span class="document-color">document</span>.<span class="function-color">getElementById</span>(<span class="string-color">"square"</span>);<br>
+                        <br>
+                        <span class="var-color">colorInput</span>.<span class="function-color">addEventListener</span>(<span class="string-color">"input"</span>,<span class="const-color">function</span>(){<br>
+                            <span class="invisible">chu</span><span class="var-color">square</span>.<span class="var-color">style</span>.<span class="document-color">backgroundColor</span> = <span class="var-color">colorInput</span>.<span class="document-color">value</span>;<br>
+                            <span class="invisible">chu</span><span class="var-color">hexOutput</span>.<span class="document-color">textContent</span> = <span class="var-color">colorInput</span>.<span class="document-color">value</span>;<br>
+                            <span class="invisible">chu</span><span class="var-color">rgbOutput</span>.<span class="document-color">textContent</span> = <span class="function-color">hexToRgb</span>(<span class="var-color">colorInput</span>.<span class="document-color">value</span>);<br>
+                        });
+                    </p>
+                    <h3>Do you want to test the library?</h3>
+                    <p style="margin-bottom: 85px;">Open the console (f12) and try hexToRGB.js now!</p>
+                </div>
+            </section>
+        </article>
+    </main>
+    </div>
+    <footer>hexToRGB.js &copy All rights reserved.</footer>
+    <script src="hexToRGB.js"></script>
+    <script src="example.js"></script>
+</body>
+</html>
